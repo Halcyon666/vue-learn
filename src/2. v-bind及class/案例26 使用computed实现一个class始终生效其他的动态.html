@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>案例24</title>
+</head>
+<body>
+	<div id="app">
+		<button :class="classes"></button>
+	</div>
+	<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+	<script>
+		var app = new Vue({
+			el:'#app',
+			data: {
+				size: 'large',
+				disabled: true
+			},
+			computed: {
+				classes: function() {
+					return [
+						'btn',
+						{
+						// 定义btn大小，不为空的时候就为size的尺寸
+							['btn-' + this.size]: this.size != '',
+						// 定义button是否可用
+							['btn-disabled']: this.disabled
+						}
+					]
+				}
+			}
+		})	
+	</script>
+</body>
+</html>
