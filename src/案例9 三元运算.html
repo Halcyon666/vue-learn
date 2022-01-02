@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>案例9</title>
+</head>
+<body>
+	<div id="app">
+	<!-- Vue .js 只支持单个表达式，不支持语句和流控制 -->
+		{{ number / 10 }}
+		{{ isOK ? 'Y' : 'N' }}
+		{{ text.split(',').reverse().join(',') }}
+	</div>
+	<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+	<script>
+		var app = new Vue({
+			el:'#app',
+			data: {
+				number: 100,
+				isOK: false,
+				text: '123,456'
+			}
+		})
+	</script>
+</body>
+</html>

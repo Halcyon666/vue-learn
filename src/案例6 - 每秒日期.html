@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>案例6</title>
+</head>
+<body>
+	<div id="app">
+		{{ date }}
+	</div>
+	<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+	<script>
+		var app = new Vue({
+		//#app为某个元素的id
+			el:'#app',
+			data: {
+				date: new Date()
+			},
+			mounted: function () {
+				var _this = this;
+				this.timer = setInterval(function() {
+					_this.date = new Date();// 每秒修改一次
+				}, 1000)
+			},
+			beforeDestroy: function() {
+				if(this.timer) {
+					clearINterval(this.timer);// 清除定时器
+				} 
+			}
+		})
+	</script>
+</body>
+</html>
