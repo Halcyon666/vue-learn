@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>案例28</title>
+	<link rel="stylesheet" type="text/css" href="v-cloak.css">
+</head>
+<body>
+	<div id="app" v-cloak>
+		{{ message }}
+	</div>
+	<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+	<script>
+		var app = new Vue({
+			el:'#app',
+			data: {
+				message: '页面正在加载中……'
+			}
+		});
+		
+	</script>
+	
+</body>
+</html>
