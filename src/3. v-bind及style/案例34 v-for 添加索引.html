@@ -2,13 +2,12 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Vue Example one</title>
+	<title>34</title>
 </head>
 <body>
 	<div id="app">
 		<ul>
-			<li v-for="book in books">{{ book.name }}</li>
-			<!-- <li v-for="book of books">{{ book.name }}</li> -->
+			<li v-for="(book, index) in books">{{ index }} - {{ book.name }}</li>
 		</ul>
 	</div>
 	<script src="https://unpkg.com/vue/dist/vue.min.js"></script>

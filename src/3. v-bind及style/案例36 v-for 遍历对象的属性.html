@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>36</title>
+</head>
+<body>
+	<div id="app">
+		<span v-for="value in user"> {{ value }}</span>
+	</div>
+	<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+	<script>
+		new Vue({
+			el: '#app',
+			data: {
+				user: {
+					name: 'Aresn',
+					gender: 'male',
+					age: 26
+				}
+			}
+		})
+	</script>
+</body>
+</html>
