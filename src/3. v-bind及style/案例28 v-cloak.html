@@ -3,9 +3,15 @@
 <head>
 	<meta charset="utf-8">
 	<title>案例28</title>
-	<link rel="stylesheet" type="text/css" href="v-cloak.css">
+	<!-- <link rel="stylesheet" type="text/css" href="v-cloak.css"> -->
+	<style>
+		[v-cloak] {
+			display: none;
+		}
+	</style>
 </head>
 <body>
+	<!-- Vue接管时会移除v-cloak 在页面未加载完时 不会展示插值语法或者未解析的内容 -->
 	<div id="app" v-cloak>
 		{{ message }}
 	</div>
@@ -14,7 +20,7 @@
 		var app = new Vue({
 			el:'#app',
 			data: {
-				message: '页面正在加载中……'
+				message: 'AAA'
 			}
 		});
 		
